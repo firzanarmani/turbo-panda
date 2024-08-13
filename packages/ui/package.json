@@ -3,14 +3,32 @@
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
-  "sideEffects": false,
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      }
+    },
+    "./preset": {
+      "source": "./src/preset.ts",
+      "require": "./dist/preset.js",
+      "types": "./dist/preset.d.ts",
+      "import": {
+        "types": "./dist/preset.d.mts",
+        "default": "./dist/preset.mjs"
+      }
+    }
+  },
   "files": [
     "dist/**"
   ],
   "scripts": {
+    "prepare": "npm run codegen && npm run build",
+    "codegen": "panda codegen",
     "build": "tsup",
     "clean": "rm -rf dist",
     "dev": "tsup --watch",
@@ -22,6 +40,7 @@
     "preset": "@repo/jest-presets/browser"
   },
   "devDependencies": {
+    "@pandacss/dev": "^0.45.0",
     "@repo/eslint-config": "workspace:*",
     "@repo/jest-presets": "workspace:*",
     "@repo/typescript-config": "workspace:*",

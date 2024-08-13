@@ -3,3 +3,7 @@ node_modules
 /build
 .env
 .vercel
+
+## Panda
+styled-system
+styled-system-studio

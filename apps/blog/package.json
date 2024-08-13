@@ -4,6 +4,7 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
+    "prepare": "panda codegen",
     "build": "remix vite:build",
     "dev": "remix vite:dev",
     "typecheck": "tsc"
@@ -12,6 +13,7 @@
     "@remix-run/node": "^2.9.2",
     "@remix-run/react": "^2.9.2",
     "@remix-run/server-runtime": "^2.9.2",
+    "@repo/styled-system": "workspace:^",
     "@repo/ui": "workspace:*",
     "@vercel/analytics": "^1.2.2",
     "@vercel/remix": "2.9.2-patch.2",
@@ -20,8 +22,10 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@pandacss/dev": "^0.45.0",
     "@remix-run/dev": "^2.9.2",
     "@remix-run/eslint-config": "^2.9.2",
+    "@types/node": "^20.11.24",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.7.4",

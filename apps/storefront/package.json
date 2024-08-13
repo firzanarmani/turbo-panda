@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "prepare": "panda codegen",
     "build": "next build",
     "clean": "rm -rf .next",
     "dev": "next dev -p 3002",
@@ -12,18 +13,20 @@
   },
   "dependencies": {
     "@repo/logger": "workspace:*",
+    "@repo/styled-system": "workspace:^",
+    "@repo/ui": "workspace:*",
     "next": "^14.1.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@repo/ui": "workspace:*"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.1.1",
+    "@pandacss/dev": "^0.45.0",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.62",
     "@types/react-dom": "^18.2.19",
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
     "typescript": "^5.3.3"
   }
 }
