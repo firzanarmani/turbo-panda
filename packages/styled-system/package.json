@@ -1,0 +1,37 @@
+{
+  "name": "@repo/styled-system",
+  "version": "1.0.0",
+  "exports": {
+    "./css": {
+      "types": "./css/index.d.ts",
+      "require": "./css/index.js",
+      "import": "./css/index.js"
+    },
+    "./tokens": {
+      "types": "./tokens/index.d.ts",
+      "require": "./tokens/index.js",
+      "import": "./tokens/index.js"
+    },
+    "./types": {
+      "types": "./types/index.d.ts",
+      "require": "./types/index.js",
+      "import": "./types/index.js"
+    },
+    "./patterns": {
+      "types": "./patterns/index.d.ts",
+      "require": "./patterns/index.js",
+      "import": "./patterns/index.js"
+    },
+    "./jsx": {
+      "types": "./jsx/index.d.ts",
+      "require": "./jsx/index.js",
+      "import": "./jsx/index.js"
+    },
+    "./recipes": {
+      "types": "./recipes/index.d.ts",
+      "require": "./recipes/index.js",
+      "import": "./recipes/index.js"
+    },
+    "./styles.css": "./styles.css"
+  }
+}
